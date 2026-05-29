@@ -1,6 +1,6 @@
-# 🪴 Ejemplo de PelelaJS
+# 🔄 Conversor Pelela
 
-¡Bienvenido a tu nuevo proyecto generado con Pelela CLI! Este esqueleto básico está listo para que empieces a programar, e incluye configuraciones modernas (linter con biome, TypeScript) y routing por defecto.
+
 
 ## 🚀 Cómo ejecutarlo
 
