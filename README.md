@@ -98,4 +98,15 @@ La propiedad `tieneKilometros` nos sirve para el renderizado condicional:
 - si es true aparecen los kilómetros
 - si es falso **no se muestra**
 
+## Reglas de pelela
 
+- La vista se define en el archivo .pelela, el modelo (viewModel) en el archivo .ts, si hay estilos van en el archivo .css
+- El binding es siempre 1 propiedad de la vista con 1 propiedad de tu modelo. Podríamos extenderlo, pero queremos mantener un mapeo simple
+- No se puede usar expresiones en un archivo .pelela, hay que escribirlas en tu modelo. Ejemplo: no podés escribir
+
+```html
+<div if="kilometros > 0">     ❌ no queremos eso
+<div if="tieneKilometros">    ✅ sí ésto
+```
+
+- Para definir propiedades usamos el syntactic sugar `get` de Typescript que permite ver un método como una propiedad de una clase. Ejemplo: `get kilometrosLocale() { ... }`
