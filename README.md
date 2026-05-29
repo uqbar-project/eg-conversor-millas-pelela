@@ -47,7 +47,7 @@ Tenemos dentro de la carpeta `src` una tríada
 
 Si utilizás VSCode o similares (Cursor, VSCodium, Windsurf, Antigravity), te recomendamos instalar las siguientes extensiones para aprovechar al máximo el entorno:
 
-- **PelelaJS** (`pelelajs.pelela-vscode`): Autocompletado, resaltado de sintaxis y diagnóstico para archivos `.pelela`.
+- **PelelaJS** (`uqbar.pelela-vscode`): Autocompletado, resaltado de sintaxis y diagnóstico para archivos `.pelela`.
 - **Biome** (`biomejs.biome`): Linter y formateador ultrarrápido configurado por defecto en este proyecto.
 
 ---
