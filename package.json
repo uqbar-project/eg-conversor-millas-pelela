@@ -10,6 +10,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "biome check .",
+    "lint:fix": "biome format --write .",
     "format": "biome format --write ."
   },
   "keywords": [],
