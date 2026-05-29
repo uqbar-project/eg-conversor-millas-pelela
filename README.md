@@ -57,7 +57,7 @@ Si utilizás VSCode o similares (Cursor, VSCodium, Windsurf, Antigravity), te re
 - Cuando el usuario escribe el valor en millas, el binding funciona desde la vista hacia el modelo (`bind-value="millas"`), es decir que eso va asignando el valor que se escribe dentro de la variable `millas` de la clase `Conversor`. 
 - Al presionar el botón Convertir, el binding es nuevamente desde la vista hacia el modelo, a través del método `convertir`, que no tiene parámetros. En el binding **no podés usar expresiones, solo llamar a atributos o propiedades (funciones get)**
 - El método convertir produce un cambio en el modelo: la variable `kilometros` se asigna en base al cálculo de conversión
-- Pero eso no es todo, hay tres propiedades que dependen de `kilometros`: `tieneKilometros`, `claseKilometros` y `kilometrosString`...
+- Pero eso no es todo, hay tres propiedades que dependen de `kilometros`: `tieneKilometros`, `claseKilometros` y `kilometrosLocale`...
 - ...entonces Pelela las recalcula y el binding va ahora **desde el modelo hacia la vista**, actualizando los elementos del DOM...
 - ...y eso produce que se visualice el div que muestra un label con la conversión en kilómetros con coma decimal y formateado según la clase css correspondiente
 
@@ -83,7 +83,19 @@ El usuario presiona el botón "Convertir", eso se asocia al método convertir() 
 
 Entonces cada una de las "propiedades" de la vista interesadas en kilometros se vuelve a renderizar:
 
-- los kilómetros (que se muestran con localización: `kilometrosString`)
+- los kilómetros localizados
 - la clase que define cómo se muestran los kilómetros
-- y el booleano que sirve para el renderizado condicional: si es true aparecen los kilómetros, si es falso **no se muestra**
+- y el booleano que indica si tenemos kilómetros
+
+> Pelela usa las definiciones de los métodos para entender cuáles son las dependencias: cualquier cambio en kilómetros dispara cambios en `kilometrosLocale`, `claseKilometros` y `tieneKilometros`. Y cualquiera de esos cambios es escuchado por los elementos del DOM de la vista para volverse a mostrar.
+
+![Binding pelela - DOM](./images/binding-pelela.gif)
+
+### Renderizado condicional
+
+La propiedad `tieneKilometros` nos sirve para el renderizado condicional:
+
+- si es true aparecen los kilómetros
+- si es falso **no se muestra**
+
 
