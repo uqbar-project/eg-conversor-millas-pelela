@@ -61,4 +61,29 @@ Si utilizás VSCode o similares (Cursor, VSCodium, Windsurf, Antigravity), te re
 - ...entonces Pelela las recalcula y el binding va ahora **desde el modelo hacia la vista**, actualizando los elementos del DOM...
 - ...y eso produce que se visualice el div que muestra un label con la conversión en kilómetros con coma decimal y formateado según la clase css correspondiente
 
-TODO: Agregar un diagrama
+### Binding vista a modelo
+
+![Pelela - Binding view-model](./images/binding-pelela-1.png)
+
+El usuario escribe el valor en millas, en el modelo se asigna sucesivamente:
+
+- atributo millas, valor: 1
+- atributo millas, valor: 10
+- atributo millas, valor: 105
+
+### Evento disparado desde la vista
+
+![Pelela - Evento desde un botón](./images/binding-pelela-2.png)
+
+El usuario presiona el botón "Convertir", eso se asocia al método convertir() en nuestro view model Conversor. Eso produce cambios dentro de nuestro modelo: el atributo `kilometros` pasa a tener el valor 168.981
+
+### Binding modelo a vista
+
+![Pelela - Binding model-view](./images/binding-pelela-3.png)
+
+Entonces cada una de las "propiedades" de la vista interesadas en kilometros se vuelve a renderizar:
+
+- los kilómetros (que se muestran con localización: `kilometrosString`)
+- la clase que define cómo se muestran los kilómetros
+- y el booleano que sirve para el renderizado condicional: si es true aparecen los kilómetros, si es falso **no se muestra**
+

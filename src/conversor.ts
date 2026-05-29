@@ -14,7 +14,7 @@ export class Conversor {
     return (this.kilometros ?? 0) > 100 ? 'big' : 'small'
   }
 
-  get kilometrosString() {
+  get kilometrosLocale() {
     return this.kilometros?.toLocaleString('es-ES')
   }
 }

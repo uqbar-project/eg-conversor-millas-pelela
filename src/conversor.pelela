@@ -10,7 +10,7 @@
     <button click="convertir">Convertir</button>
 
     <div if="tieneKilometros" class="result" bind-class="claseKilometros">
-      Kilómetros: <span bind-content="kilometrosString"></span>
+      Kilómetros: <span bind-content="kilometrosLocale"></span>
     </div>
   </pelela>
 </div>
