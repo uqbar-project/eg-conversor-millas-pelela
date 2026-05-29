@@ -1,0 +1,16 @@
+<div class="card">
+  <h1>Conversor Millas a Kilómetros</h1>
+
+  <pelela view-model="Conversor">
+    <div class="input-group">
+      <label for="miles-input">Millas</label>
+      <input id="miles-input" type="number" bind-value="millas" placeholder="0"/>
+    </div>
+
+    <button click="convertir">Convertir</button>
+
+    <div if="tieneKilometros" class="result" bind-class="claseKilometros">
+      Kilómetros: <span bind-content="kilometrosString"></span>
+    </div>
+  </pelela>
+</div>
