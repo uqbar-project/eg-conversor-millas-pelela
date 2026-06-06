@@ -63,7 +63,7 @@ Si utilizás VSCode o similares (Cursor, VSCodium, Windsurf, Antigravity), te re
 
 ### Binding vista a modelo
 
-![Pelela - Binding view-model](./images/binding-pelela-1.png)
+![Pelela - Binding view-model](./images/binding-conversor-1-ok.png)
 
 El usuario escribe el valor en millas, en el modelo se asigna sucesivamente:
 
@@ -73,13 +73,13 @@ El usuario escribe el valor en millas, en el modelo se asigna sucesivamente:
 
 ### Evento disparado desde la vista
 
-![Pelela - Evento desde un botón](./images/binding-pelela-2.png)
+![Pelela - Evento desde un botón](./images/binding-conversor-2-ok.png)
 
 El usuario presiona el botón "Convertir", eso se asocia al método convertir() en nuestro view model Conversor. Eso produce cambios dentro de nuestro modelo: el atributo `kilometros` pasa a tener el valor 168.981
 
 ### Binding modelo a vista
 
-![Pelela - Binding model-view](./images/binding-pelela-3.png)
+![Pelela - Binding model-view](./images/binding-conversor-3-ok.png)
 
 Entonces cada una de las "propiedades" de la vista interesadas en kilometros se vuelve a renderizar:
 
