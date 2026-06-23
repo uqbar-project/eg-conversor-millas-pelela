@@ -4,7 +4,7 @@
   <pelela view-model="Conversor">
     <div class="input-group">
       <label for="miles-input">Millas</label>
-      <input id="miles-input" type="number" bind-value="millas" placeholder="0"/>
+      <input id="miles-input" type="number" bind-value="millas" placeholder="0" enter="convertir"/>
     </div>
 
     <button click="convertir">Convertir</button>

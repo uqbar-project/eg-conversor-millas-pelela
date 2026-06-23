@@ -39,7 +39,7 @@ Tenemos dentro de la carpeta `src` una tríada
 ## Reglas para los archivos
 
 - Las clases de Typescript siguen el formato camelCase (sin espacios, cada palabra comienza con la primera letra en mayúscula)
-- Los archivos .pelela, .ts y .css siguen el formato snake-case (sin espacios, se separa cada palabra con un guión medio)
+- Los archivos .pelela, .ts y .css siguen el formato kebab-case (sin espacios, se separa cada palabra con un guión medio)
 
 ---
 
