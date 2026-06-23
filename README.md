@@ -34,7 +34,19 @@ Tenemos dentro de la carpeta `src` una tríada
 - `conversor.ts`: Contiene la lógica, el estado y el comportamiento (View-Model).
 - `conversor.css`: Los estilos dedicados para este componente.
 
-💡 **Tip:** Podés renombrar estos tres archivos en cualquier momento (usando el CLI: `pelela rename Conversor MiConversor`) y el framework automáticamente tomará los cambios gracias a su registro dinámico.
+💡 **Tip:** Podés renombrar estos tres archivos en cualquier momento (usando el CLI: `pelela rename Conversor MiConversor`, usamos siempre el nombre del componente que va en camel case) y el framework automáticamente tomará los cambios gracias a su registro dinámico.
+
+En caso de duda recordá que podés usar la ayuda del CLI:
+
+```bash
+pelela --help
+```
+
+o bien la ayuda de un comando específico:
+
+```bash
+pelela new --help
+```
 
 ## Reglas para los archivos
 
