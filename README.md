@@ -122,3 +122,5 @@ La propiedad `tieneKilometros` nos sirve para el renderizado condicional:
 ```
 
 - Para definir propiedades usamos el syntactic sugar `get` de Typescript que permite ver un método como una propiedad de una clase. Ejemplo: `get kilometrosLocale() { ... }`
+
+- En Pelela es obligatorio respetar la convención de cierre de tags de HTML 5: por eso si definís tags como `<span ... />` o `<div ... />` eso te va a tirar error porque div y span son tags normales, y no soportan autocierre como los elementos vacíos img, input, br o hr. Igualmente el mensaje de error es bastante claro y a la larga terminaremos escribiendo páginas HTML de manera correcta.
